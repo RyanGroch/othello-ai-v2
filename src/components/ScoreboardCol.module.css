@@ -1,0 +1,41 @@
+.scoreboard__col {
+  text-align: center;
+  padding: 1em;
+  border-radius: 1em;
+  transition: background-color 0.5s ease-in;
+}
+
+.scoreboard__col--highlighted {
+  background-color: #a89700;
+}
+
+.scoreboard__col .scoreboard__name {
+  font-size: 1rem;
+  padding: 0 0.25em;
+  overflow-wrap: anywhere;
+}
+
+.scoreboard__col .scoreboard__score {
+  font-size: 1.25rem;
+  position: relative;
+  padding-bottom: 0.25em;
+  min-width: 3.5em;
+}
+
+.scoreboard__col .scoreboard__score::before {
+  left: 0;
+  top: 5%;
+  content: "";
+  position: absolute;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+}
+
+.scoreboard__col .scoreboard__score-white::before {
+  background-color: #fff;
+}
+
+.scoreboard__col .scoreboard__score-black::before {
+  background-color: #000;
+}

@@ -1,0 +1,16 @@
+.header {
+  padding: 0.5em 5vw;
+  box-shadow: 0 0 2px 1px #000;
+  background-color: #375a7f;
+}
+
+.header .header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header h1 {
+  color: #fff;
+  font-size: 2rem;
+}

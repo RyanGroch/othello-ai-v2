@@ -1,0 +1,59 @@
+.cell {
+  width: 12.5%;
+  height: 12.5%;
+  background-color: green;
+  border: 1px solid #000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.cell.valid {
+  cursor: pointer;
+}
+
+.cell.valid .cell__circle {
+  position: relative;
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  border: 1px dotted #000;
+  pointer-events: none;
+  user-select: none;
+}
+
+.cell .cell__piece {
+  position: relative;
+  width: 90%;
+  height: 90%;
+  border-radius: 50%;
+  transform-style: preserve-3d;
+}
+
+.cell .cell__piece--flipped {
+  transform: rotateY(0.5turn);
+}
+
+.cell .cell__piece--animate {
+  transition: transform 0.65s ease-out;
+}
+
+.cell .cell__piece .cell__piece-side {
+  position: absolute;
+  border-radius: 50%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+}
+
+.cell .cell__piece .cell__piece-black {
+  background-color: #000;
+}
+
+.cell .cell__piece .cell__piece-white {
+  background-color: #fff;
+  transform: rotateY(0.5turn);
+}

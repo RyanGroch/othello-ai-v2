@@ -1,0 +1,64 @@
+.backdrop {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.25);
+  display: grid;
+  place-items: center;
+  opacity: 0;
+  user-select: none;
+  pointer-events: none;
+  transition: opacity 0.35s ease-in-out;
+}
+
+.backdrop.backdrop--visible {
+  opacity: 1;
+  user-select: auto;
+  pointer-events: auto;
+}
+
+.backdrop .modal {
+  padding: 2em;
+  border-radius: 1em;
+  background-color: #fff;
+  min-width: 15em;
+}
+
+.backdrop .modal .modal__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1em;
+}
+
+.backdrop .modal .modal__header .modal__x {
+  cursor: pointer;
+}
+
+.modal__btn {
+  width: 100%;
+}
+
+.form .form__control {
+  padding-bottom: 2em;
+  display: flex;
+  flex-direction: column;
+}
+
+.form label {
+  padding-bottom: 0.5em;
+}
+
+.endgame {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.endgame .endgame__score {
+  text-align: center;
+  font-size: 3rem;
+  padding: 0.5em 0;
+}

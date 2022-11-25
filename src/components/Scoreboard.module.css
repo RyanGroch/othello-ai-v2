@@ -1,0 +1,11 @@
+.scoreboard {
+  background-color: #303030;
+  color: #fff;
+  margin-bottom: 0.5em;
+  width: min(30em, 80vmin);
+  border-radius: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+

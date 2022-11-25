@@ -1,0 +1,10 @@
+.board {
+  width: min(30em, 80vmin);
+  height: min(30em, 80vmin);
+  background-color: #000;
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #000;
+  border-radius: 1em;
+  overflow: hidden;
+}
