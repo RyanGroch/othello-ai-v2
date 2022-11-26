@@ -1,6 +1,5 @@
 {
   "name": "othello-v2",
-  "homepage": "thrasymachuss.github.io/othello-v2",
   "private": true,
   "version": "0.0.0",
   "type": "module",
