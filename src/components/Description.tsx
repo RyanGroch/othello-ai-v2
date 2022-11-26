@@ -46,30 +46,30 @@ const Description = () => {
       </p>
       <h3>About This App</h3>
       <p>
-        This app supports several AI algorithms that you can play against. The
-        random AI and the greedy AI are the easiest to defeat. The random AI
-        simply plays random moves, while the greedy AI flips the greatest number
-        of tiles that it can on its turn.
+        This app allows you to play against several different AI algorithms. The
+        random and greedy algorithms are the easiest to defeat. The random
+        algorithm plays a random valid move on each turn, while the greedy
+        algorithm attempts to maximize its number of tiles.
       </p>
       <p>
-        The static AI plays moves that maximize a balance of mobility &#40;the
-        number of playable moves per turn&#41; and discs captured. This AI also
-        prefers to capture the corners of the board when it is able. It poses a
-        greater challenge than the random or greedy AIs, but it still doesn't
-        calculate ahead past the current turn.
+        There are two additional algorithms you can play against. The static
+        algorithm aims to strike a balance between maximizing the number of
+        available moves and tiles captured. It also captures corners when
+        possible. The dynamic algorithm changes its priorities based on how far
+        the game has progressed.
       </p>
       <p>
-        The remaining AIs apply a minimax algorithm with alpha-beta pruning to
-        calculate one or more moves ahead. They ultimately evaluate positions
-        with the same criteria that the static AI uses, but they assess possible
-        future positions rather than current one. Generally, an AI will improve
-        in performance as the number of moves it looks ahead increases. If you'd
-        like a challenge, try playing against the Minimax+3 AI.
+        Additionally, all algorithms aside from “random” allow you to add depth.
+        The depth of an algorithm refers to the number of moves that it looks
+        ahead. A greedy+3 algorithm, for instance, will aim to maximize its
+        tiles three turns ahead of the current move.
       </p>
       <p>
         This app was built with React. You can find the source code{" "}
-        <a href="/#">here</a>, and my developer portfolio <a href="/#">here</a>.
-        Thanks for checking out my app, and I hope you have fun!
+        <a href="https://github.com/Thrasymachuss/othello-ai-v2">here</a>, and
+        my developer portfolio{" "}
+        <a href="https://thrasymachuss.github.io/portfolio">here</a>. Thanks for
+        checking out my app, and I hope you have fun!
       </p>
     </section>
   );

@@ -1,6 +1,7 @@
 export enum PlayerType {
   "Human" = "Human",
   "Basic" = "Basic",
+  "Dynamic" = "Dynamic",
   "Greedy" = "Greedy",
   "Random" = "Random",
 }

@@ -41,16 +41,6 @@
   width: 100%;
 }
 
-.form .form__control {
-  padding-bottom: 2em;
-  display: flex;
-  flex-direction: column;
-}
-
-.form label {
-  padding-bottom: 0.5em;
-}
-
 .endgame {
   display: flex;
   flex-direction: column;

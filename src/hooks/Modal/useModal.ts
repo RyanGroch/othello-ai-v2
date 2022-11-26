@@ -5,18 +5,18 @@ const useModal = (
   blackScore: number,
   whiteScore: number,
   startNewGame: (
-    blackPlayer: PlayerType,
-    whitePlayer: PlayerType,
-    whiteDepth: number,
-    blackDepth: number
+    BlackPlayer: PlayerType,
+    WhitePlayer: PlayerType,
+    WhiteDepth: number,
+    BlackDepth: number
   ) => void,
   closeModal: () => void
 ) => {
   const [playersInput, setPlayersInput] = useState({
-    blackPlayer: PlayerType.Human,
-    whitePlayer: PlayerType.Human,
-    blackDepth: 0,
-    whiteDepth: 0,
+    BlackPlayer: PlayerType.Human,
+    WhitePlayer: PlayerType.Human,
+    BlackDepth: 0,
+    WhiteDepth: 0,
   });
   const winMsg =
     blackScore > whiteScore
@@ -26,19 +26,23 @@ const useModal = (
       : "Draw!";
   const resetForm = () => {
     setPlayersInput({
-      blackPlayer: PlayerType.Human,
-      whitePlayer: PlayerType.Human,
-      blackDepth: 0,
-      whiteDepth: 0,
+      BlackPlayer: PlayerType.Human,
+      WhitePlayer: PlayerType.Human,
+      BlackDepth: 0,
+      WhiteDepth: 0,
     });
   };
   const handleSubmit: FormEventHandler = (e) => {
     e.preventDefault();
     startNewGame(
-      playersInput.blackPlayer,
-      playersInput.whitePlayer,
-      playersInput.blackDepth,
-      playersInput.whiteDepth
+      playersInput.BlackPlayer,
+      playersInput.WhitePlayer,
+      playersInput.BlackPlayer !== PlayerType.Random
+        ? playersInput.BlackDepth
+        : 0,
+      playersInput.WhitePlayer !== PlayerType.Random
+        ? playersInput.WhiteDepth
+        : 0
     );
     resetForm();
   };

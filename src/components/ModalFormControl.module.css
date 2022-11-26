@@ -1,0 +1,9 @@
+.form__control {
+  padding-bottom: 2em;
+  display: flex;
+  flex-direction: column;
+}
+
+.form__control label {
+  padding-bottom: 0.5em;
+}

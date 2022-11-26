@@ -1,13 +1,9 @@
 import { Position } from "../../../game/position";
+import { scoreDiffEval } from "./evalHelpers";
 
 const greedyEval = (Position: Position) => {
   const currentPlayer = Position.playerToMove;
-
-  const currentPlayerTiles =
-    currentPlayer === 1 ? Position.blackTiles : Position.whiteTiles;
-  const otherPlayerTiles =
-    currentPlayer === 2 ? Position.blackTiles : Position.whiteTiles;
-  return currentPlayerTiles - otherPlayerTiles;
+  return scoreDiffEval(Position, currentPlayer);
 };
 
 export default greedyEval;

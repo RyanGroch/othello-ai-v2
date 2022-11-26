@@ -1,5 +1,6 @@
 import { Position } from "../othello-logic/game/position";
 import basicEval from "../othello-logic/players/algorithms/evaluators/basicEval";
+import dynamicEval from "../othello-logic/players/algorithms/evaluators/dynamicEval";
 import greedyEval from "../othello-logic/players/algorithms/evaluators/greedyEval";
 import randomEval from "../othello-logic/players/algorithms/evaluators/randomEval";
 import { EvalFunc } from "../othello-logic/players/algorithms/helpers";
@@ -19,6 +20,8 @@ const getEvalFunc = (evaluator: PlayerType): EvalFunc | null => {
       return basicEval;
     case PlayerType.Greedy:
       return greedyEval;
+    case PlayerType.Dynamic:
+      return dynamicEval;
     case PlayerType.Random:
       return randomEval;
     default:
@@ -45,7 +48,6 @@ onmessage = (msg) => {
   const index = position.playerToMove - 1;
   const posWithMethods = new Position(
     position.playerToMove,
-    position.turnCount,
     position.board,
     position.prevMovePassed
   );

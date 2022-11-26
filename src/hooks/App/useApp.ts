@@ -33,21 +33,21 @@ const useApp = () => {
   };
 
   const startNewGame = (
-    blackPlayer: PlayerType,
-    whitePlayer: PlayerType,
-    blackDepth: number,
-    whiteDepth: number
+    BlackPlayer: PlayerType,
+    WhitePlayer: PlayerType,
+    BlackDepth: number,
+    WhiteDepth: number
   ) => {
     const sanitizedBlackDepth = Math.floor(
-      blackDepth > 0 && blackDepth < 11 ? blackDepth : 0
+      BlackDepth > 0 && BlackDepth < 11 ? BlackDepth : 0
     );
     const sanitizedWhiteDepth = Math.floor(
-      whiteDepth > 0 && whiteDepth < 11 ? whiteDepth : 0
+      WhiteDepth > 0 && WhiteDepth < 11 ? WhiteDepth : 0
     );
 
     setPosition(new Position());
     setPlayers({
-      evaluators: [blackPlayer, whitePlayer],
+      evaluators: [BlackPlayer, WhitePlayer],
       depth: [sanitizedBlackDepth, sanitizedWhiteDepth],
     });
     if (aiState.timeoutId) clearTimeout(aiState.timeoutId);

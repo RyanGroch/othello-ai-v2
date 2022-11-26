@@ -29,7 +29,6 @@ export class Position {
 
   constructor(
     readonly playerToMove: PlayerNumber = 1,
-    readonly turnCount = 1,
     readonly board: BoardType = defaultBoard,
     readonly prevMovePassed = false
   ) {
@@ -53,7 +52,7 @@ export class Position {
   passTurn() {
     if (this.validMoves.length || this.gameOver) return this;
     const newPlayerToMove = this.playerToMove === 1 ? 2 : 1;
-    return new Position(newPlayerToMove, this.turnCount, this.board, true);
+    return new Position(newPlayerToMove, this.board, true);
   }
 
   playMove(move: Move): Position {
@@ -61,7 +60,6 @@ export class Position {
 
     const [playedRowIndex, playedColIndex] = textToRowCol(move);
     const newPlayerToMove = this.playerToMove === 1 ? 2 : 1;
-    const newTurnCount = this.turnCount + 1;
 
     const capturedTiles = directions.reduce(
       (prevCapturedTiles, direction) => [
@@ -89,7 +87,7 @@ export class Position {
       });
     });
 
-    return new Position(newPlayerToMove, newTurnCount, newBoard);
+    return new Position(newPlayerToMove, newBoard);
   }
 
   calcValidMoves(thisPlayer: boolean = true) {
