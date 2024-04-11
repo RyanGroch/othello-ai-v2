@@ -2,7 +2,7 @@
 
 This is a browser app which allows the user to play Othello. You may play against another human (on the same device), or against an AI of varying levels of difficulty. You may also have the AI play against itself.
 
-You can visit the app [here](https://thrasymachuss.github.io/othello-ai-v2/).
+You can visit the app [here](https://ryangroch.github.io/othello-ai-v2/).
 
 ## What is Othello?
 
